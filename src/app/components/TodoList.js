@@ -36,7 +36,7 @@ const TodoList = () => {
       <ul className="space-y-4">
         {filteredTodos.length > 0 ? (
           filteredTodos.map((todo) => (
-            <li key={todo.id} className="flex items-center justify-between p-4 border-b border-gray-300 bg-white rounded-lg">
+            <li key={todo.id} className="flex items-center justify-between p-4 border-b border-gray-300 bg-white rounded-lg animate-fade-in">
               <span className={`flex-1 ${todo.completed ? 'line-through text-gray-500' : ''}`}>
                 {todo.text}
               </span>
@@ -57,7 +57,7 @@ const TodoList = () => {
       {filteredTodos.length > 0 && (
         <button
           onClick={handleDeleteAll}
-          className="mt-4 p-2 w-full bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg"
+          className="mt-4 p-2 w-full bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg animate-fade-in"
         >
           Supprimer toutes les tâches
         </button>
